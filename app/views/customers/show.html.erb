@@ -1,24 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @customer.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @customer.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @customer.email %>
-</p>
-
-<p>
-  <strong>Quote:</strong>
-  <%= @customer.quote %>
-</p>
-
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<div style="--top-bar-background:#00848e; --top-bar-color:#f9fafb; --top-bar-background-lighter:#1d9ba4;">
+  <div class="Polaris-Page">
+    <div class="Polaris-Page-Header Polaris-Page-Header__Header--hasPagination Polaris-Page-Header__Header--hasBreadcrumbs Polaris-Page-Header__Header--hasRollup Polaris-Page-Header__Header--hasSecondaryActions">
+      <div class="Polaris-Page-Header__Navigation">
+        <nav role="navigation"><a class="Polaris-Breadcrumbs__Breadcrumb" href="/orders" data-polaris-unstyled="true"><span class="Polaris-Breadcrumbs__Icon"><span class="Polaris-Icon"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                  <path d="M12 16a.997.997 0 0 1-.707-.293l-5-5a.999.999 0 0 1 0-1.414l5-5a.999.999 0 1 1 1.414 1.414L8.414 10l4.293 4.293A.999.999 0 0 1 12 16" fill-rule="evenodd"></path>
+                </svg></span></span><span class="Polaris-Breadcrumbs__Content">Customers</span></a></nav>
+                <div class="Polaris-Page-Header__Rollup">
+                  <div><button type="button" class="Polaris-Button Polaris-Button--plain Polaris-Button--iconOnly" tabindex="0" aria-controls="Popover28" aria-owns="Popover28" aria-haspopup="true" aria-expanded="false"><span class="Polaris-Button__Content"><span class="Polaris-Button__Icon"><span class="Polaris-Icon"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                              <path d="M6 10a2 2 0 1 1-4.001-.001A2 2 0 0 1 6 10zm6 0a2 2 0 1 1-4.001-.001A2 2 0 0 1 12 10zm6 0a2 2 0 1 1-4.001-.001A2 2 0 0 1 18 10z" fill-rule="evenodd"></path>
+                            </svg></span></span></span></button></div>
+                </div>
+      </div>
+      <div class="Polaris-Page-Header__TitleAndRollup">
+        <div class="Polaris-Page-Header__Title">
+          <div>
+            <h1 class="Polaris-DisplayText Polaris-DisplayText--sizeLarge"><%= @customer.first_name %></h1>
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <div class="Polaris-Page-Header__Actions">
+        <div class="Polaris-Page-Header__SecondaryActions">
+          <div class="Polaris-Page-Header__IndividualActions">
+            <div class="Polaris-Page-Header__IndividualAction"><button class="Polaris-Header-Action" type="button">Edit</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Polaris-Page__Content">
+      <div class="Polaris-Card">
+        <div class="Polaris-Card__Header">
+          <h2 class="Polaris-Heading">Famous quote</h2>
+        </div>
+        <div class="Polaris-Card__Section">
+          <div class="Polaris-Stack Polaris-Stack--alignmentCenter">
+            <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+              <p><%= @customer.quote %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
